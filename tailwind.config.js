@@ -8,5 +8,8 @@ export default {
     extend: {},
   },
   plugins: [],
+  corePlugins: {
+    preflight: true, // Needed if you're customizing scrollbar manually
+  },
 }
 
