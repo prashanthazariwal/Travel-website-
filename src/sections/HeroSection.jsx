@@ -4,18 +4,20 @@ import profile1 from "../assets/profilepic1.webp";
 import profile2 from "../assets/profilepic2.jpg";
 import profile3 from "../assets/profilepic3.jpg";
 import profile4 from "../assets/profilepic4.webp";
-import { RiArrowRightCircleFill, RiArrowRightFill } from "@remixicon/react";
+import lady from "../assets/ladywithbag.png";
+import { RiArrowRightFill } from "@remixicon/react";
 import SplineMobile from "../components/SplineMobile";
 
 const HeroSection = () => {
   return (
-    <div className="bg-[#F8F7FC] w-full h-screen overflow-hidden relative">
+    <div className="bg-[#F8F7FC] w-full h-[126vh] overflow-hidden relative">
       <Navbar />
-      <h1 className="text-[33rem] font-bold absolute -top-[25%] -left-[30%] text-[#F3F3F5] leading-none ">
+      <h1 className="text-[8rem] md:text-[25rem] lg:text-[40vmax] font-bold absolute -top-[5%] -left-[25%] md:-top-[20%] md:-left-[40%] lg:-top-[25%] lg:-left-[30%] text-[#eeeeef] opacity-70 leading-none select-none">
         TOGO
       </h1>
 
-      <div className="w-full flex justify-end px-10">
+      {/* profiles of clients */}
+      <div className="w-full hidden lg:flex justify-end px-10 ">
         <div className="w-fit flex flex-col mt-[9%]">
           <div className="w-40 h-8 flex relative">
             <div className="w-10 h-10 rounded-full  overflow-hidden">
@@ -57,7 +59,26 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="w-full h-fit bg-red-200">
+      {/* Title Headings container */}
+      <div className="w-full px-10 flex ">
+        <div id="leftDiv"  className="w-1/2 flex flex-col gap-8 ">
+
+        <h2 className="text-[12rem] font-semibold leading-tight">Enjoy</h2>
+        <p className="text-[5rem] font-semibold leading-[1] ml-2">Realtime  <br /><span className="text-[#057df7] inline-block ml-8"> Best Deal</span> <br /> Travel <br /> The World</p>
+        </div>
+        <div id="rightDiv" className="w-1/2 flex flex-col items-center pt-80">
+        <div className="w-52 h-32 relative bg-blue-500">
+        <div className="w-96 h-96  overflow-hidden absolute -top-[200%] -left-[45%] ">
+          <img src={lady} alt="" className="w-full h-full object-cover" />
+        </div>
+        </div>
+        
+        <h2 className="text-[12rem] font-semibold leading-none ml-32 ">TRIP</h2>
+        </div>
+      </div>
+
+      {/* spline Mobile container */}
+      <div className="w-full h-fit absolute top-1/4"> 
         <SplineMobile/>
       </div>
     </div>
