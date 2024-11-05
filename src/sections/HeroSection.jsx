@@ -10,9 +10,9 @@ import SplineMobile from "../components/SplineMobile";
 
 const HeroSection = () => {
   return (
-    <div className="bg-[#F8F7FC] w-full h-[126vh] overflow-hidden relative">
+    <div className="bg-[#F8F7FC] w-full h-fit lg:pb-20 overflow-hidden relative">
       <Navbar />
-      <h1 className="text-[8rem] md:text-[25rem] lg:text-[40vmax] font-bold absolute -top-[5%] -left-[25%] md:-top-[20%] md:-left-[40%] lg:-top-[25%] lg:-left-[30%] text-[#eeeeef] opacity-70 leading-none select-none">
+      <h1 className="text-[12rem] md:text-[25rem] lg:text-[40vmax] font-bold absolute -top-[5%] -left-[75%] md:-top-[20%] md:-left-[40%] lg:-top-[25%] lg:-left-[30%] text-[#eeeeef] opacity-70 leading-none select-none">
         TOGO
       </h1>
 
@@ -60,25 +60,25 @@ const HeroSection = () => {
       </div>
 
       {/* Title Headings container */}
-      <div className="w-full px-10 flex ">
-        <div id="leftDiv"  className="w-1/2 flex flex-col gap-8 ">
+      <div className="w-full px-10 flex flex-col lg:flex-row  ">
+        <div id="leftDiv"  className="w-full lg:w-1/2 flex flex-col gap-8  pt-20 lg:pt-0 ">
 
-        <h2 className="text-[12rem] font-semibold leading-tight">Enjoy</h2>
-        <p className="text-[5rem] font-semibold leading-[1] ml-2">Realtime  <br /><span className="text-[#057df7] inline-block ml-8"> Best Deal</span> <br /> Travel <br /> The World</p>
+        <h2 className="text-[5rem] lg:text-[12rem] font-semibold leading-tight ">Enjoy</h2>
+        <p className="text-2xl lg:text-[5rem] font-semibold leading-[1] ml-2">Realtime  <br /><span className="text-[#057df7] inline-block ml-8"> Best Deal</span> <br /> Travel <br /> The World</p>
         </div>
-        <div id="rightDiv" className="w-1/2 flex flex-col items-center pt-80">
+        <div id="rightDiv" className="w-full lg:w-1/2 flex flex-col items-center pt-40 lg:pt-80 ">
         <div className="w-52 h-32 relative bg-blue-500">
-        <div className="w-96 h-96  overflow-hidden absolute -top-[200%] -left-[45%] ">
+        <div className="w-72 h-72 lg:w-96 lg:h-96 -translate-x-1/2 -translate-y-1/2 overflow-hidden absolute -top-[12%] lg:-top-[50%]  left-[50%] lg:left-[48%]">
           <img src={lady} alt="" className="w-full h-full object-cover" />
         </div>
         </div>
         
-        <h2 className="text-[12rem] font-semibold leading-none ml-32 ">TRIP</h2>
+        <h2 className="text-[5rem] lg:text-[12rem] font-semibold leading-none ml-32 ">TRIP</h2>
         </div>
       </div>
 
       {/* spline Mobile container */}
-      <div className="w-full h-fit absolute top-1/4"> 
+      <div className="w-full h-[100vh] hidden  lg:flex right-0  absolute md:top-[10%]  top-[50%]"> 
         <SplineMobile/>
       </div>
     </div>

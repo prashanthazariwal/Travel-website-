@@ -10,12 +10,12 @@ const Navbar = () => {
     <nav className="hidden w-full px-10 py-2 sm:flex justify-between mt-4 items-center fixed z-10 select-none">
       <h1 className="text-xl md:text-2xl lg:text-3xl font-bold">TO GO</h1>
       <ul className="flex text-sm md:text-base lg:text-xl font-normal text-[#868687] gap-4 md:gap-8 lg:gap-20 ml-16 p-2">
-        <li className="cursor-pointer active:font-semibold ">Services</li>
-        <li className="cursor-pointer active:font-semibold ">Case Studies</li>
-        <li className="cursor-pointer active:font-semibold ">Contact</li>
+        <li className="cursor-pointer active:font-semibold active:scale-95">Services</li>
+        <li className="cursor-pointer active:font-semibold active:scale-95">Case Studies</li>
+        <li className="cursor-pointer active:font-semibold active:scale-95">Contact</li>
       </ul>
       <div
-        className="bg-blue-500 text-sm md:text-base lg:text-lg font-normal text-white px-5 md:px-8 lg:px-12 py-2 rounded-full cursor-pointer active:scale-105
+        className="bg-blue-500 text-sm md:text-base lg:text-lg font-normal text-white px-5 md:px-8 lg:px-12 py-2 rounded-full cursor-pointer active:scale-95
        ease-linear "
       >
         Book A Call
@@ -26,7 +26,7 @@ const Navbar = () => {
        onClick={() => {
          setSideBar(!sideBar);
        }}
-       className="px-3 py-3 lg:hidden rounded-full cursor-pointer active:scale-110"
+       className="px-3 py-3 lg:hidden rounded-full cursor-pointer active:scale-95"
      >
        <RiMenu3Fill size={25} />
      </button>
@@ -38,7 +38,7 @@ const Navbar = () => {
          onClick={() => {
            setSideBar(!sideBar);
          }}
-         className="w-fit h-fit px-3 py-3 mb-5 rounded-full cursor-pointer active:scale-110"
+         className="w-fit h-fit px-3 py-3 mb-5 rounded-full cursor-pointer active:scale-95"
        >
          <RiCloseLargeLine size={25} />
        </button>
