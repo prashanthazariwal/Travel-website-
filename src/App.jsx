@@ -8,7 +8,7 @@ import Services from "./sections/Services";
 import Reviews from "./sections/Reviews";
 import WhyUs from "./sections/WhyUs";
 import Footer from "./sections/Footer";
-
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   // lenis code in useEffect
@@ -29,16 +29,15 @@ const App = () => {
 
   return (
     <div className="main overflow-hidden bg-[#121212]">
+      <ToastContainer />
       <HeroSection />
       <AboutSection />
       <MarqueSection />
       <NatureAdventureSection />
       <Services />
       <Reviews />
-      <WhyUs/>
-      <Footer/>
-
-      
+      <WhyUs />
+      <Footer />
     </div>
   );
 };

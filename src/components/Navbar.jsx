@@ -1,25 +1,48 @@
 import {  RiCloseLargeLine, RiMenu3Fill } from "@remixicon/react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import BookingModal from "./BookingModal";
 
 const Navbar = () => {
   const [sideBar, setSideBar] = useState(false);
+  const [modelOpen, setModelOpen] = useState(false);
+
+  const modalHandeler = ()=>{
+    setModelOpen(!modelOpen)
+  }
+
+  useEffect(()=>{
+    if(modelOpen){
+      document.documentElement.style.overflowY = "hidden"
+    }else{
+      document.documentElement.style.overflowY = "scroll"
+    }
+    
+  },[modelOpen])
 
   return (
     <>
+    {modelOpen && <BookingModal modalHandeler={modalHandeler} />}
     
-    <nav className="hidden w-full px-10 py-2 sm:flex justify-between mt-4 items-center fixed z-10 select-none">
+    <nav className="hidden w-full px-20 py-2 sm:flex justify-between mt-4 items-center fixed z-10 select-none">
       <h1 className="text-xl md:text-2xl lg:text-3xl font-bold">TO GO</h1>
       <ul className="flex text-sm md:text-base lg:text-xl font-normal text-[#868687] gap-4 md:gap-8 lg:gap-20 ml-16 p-2">
-        <li className="cursor-pointer active:font-semibold active:scale-95">Services</li>
+        {[{navItem : "Services" , navLink : "#Services"},
+          {navItem : "Case Studies" , navLink : "#Reviews"},
+          {navItem : "Contact" , navLink : "#Contact"},
+        ].map(nav =>{
+         return <li className="cursor-pointer active:font-semibold active:scale-95"> <a href={nav.navLink}>{nav.navItem}</a></li>
+        })}
+        {/* <li className="cursor-pointer active:font-semibold active:scale-95">Services</li>
         <li className="cursor-pointer active:font-semibold active:scale-95">Case Studies</li>
-        <li className="cursor-pointer active:font-semibold active:scale-95">Contact</li>
+        <li className="cursor-pointer active:font-semibold active:scale-95">Contact</li> */}
       </ul>
-      <div
+      <button
+      onClick={modalHandeler}
         className="bg-blue-500 text-sm md:text-base lg:text-lg font-normal text-white px-5 md:px-8 lg:px-12 py-2 rounded-full cursor-pointer active:scale-95
        ease-linear "
       >
         Book A Call
-      </div>
+      </button>
     </nav>
      <div className={`sm:hidden w-[10%] ${sideBar ? "hidden" : "flex"} flex items-center fixed right-8 top-4 z-50`}>
      <button

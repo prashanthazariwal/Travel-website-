@@ -8,39 +8,38 @@ import onlinepresence from "../assets/online-presence.png";
 import experience from "../assets/experience.png";
 
 const Services = () => {
-
-    const services = [
-        {
-          icon: experience,
-          service: "A Decade of Expertise",
-          eleboration:
-            "With 10 years of nevigating the globe , our seasoned team has honed the art curating seamless travel experience . We know the ins and outs of each destination , ensuring every trip is a masterpiece",
-        },
-        {
-          icon: onlinepresence,
-          service: "Global Presence",
-          eleboration:
-            "With a global footprint, our reach extends to the far corners of the earth. wherever your heart desires, we're there to transform your travel aspirations into reality", 
-        },
-        {
-          icon: work,
-          service: "Tailored Experiences",
-          eleboration:
-            "Your travel dreams are unique. Our bespoke itineraries cater to diverse taste, ensuring a personalized journey that resonates with your wonderlust.",
-        },
-        {
-          icon: handshake,
-          service: "Trusted Partnership",
-          eleboration:
-            "Over the years, we've build lasting partnerships with hotels, airlines and local guides. These connectios translate into exclusive perks and  insider access , elevating your travel experience",
-        },
-      ];
+  const services = [
+    {
+      icon: experience,
+      service: "A Decade of Expertise",
+      eleboration:
+        "With 10 years of nevigating the globe , our seasoned team has honed the art curating seamless travel experience . We know the ins and outs of each destination , ensuring every trip is a masterpiece",
+    },
+    {
+      icon: onlinepresence,
+      service: "Global Presence",
+      eleboration:
+        "With a global footprint, our reach extends to the far corners of the earth. wherever your heart desires, we're there to transform your travel aspirations into reality",
+    },
+    {
+      icon: work,
+      service: "Tailored Experiences",
+      eleboration:
+        "Your travel dreams are unique. Our bespoke itineraries cater to diverse taste, ensuring a personalized journey that resonates with your wonderlust.",
+    },
+    {
+      icon: handshake,
+      service: "Trusted Partnership",
+      eleboration:
+        "Over the years, we've build lasting partnerships with hotels, airlines and local guides. These connectios translate into exclusive perks and  insider access , elevating your travel experience",
+    },
+  ];
 
   return (
-    <div className="w-full px-5 lg:px-10 bg-[#121212] pt-40">
+    <div id="Services" className="w-full px-10 lg:px-20 bg-[#121212] pt-40">
       <div className="flex flex-col bg-[#EEEEEE] rounded-tl-[4vmax] rounded-tr-[20vmax] rounded-b-[4vmax] pt-20 lg:pt-40">
-        <div className="flex flex-col lg:flex-row w-full lg:w-[90%]  mx-auto items-center justify-between">
-          <h2 className=" w-full lg:w-1/2 text-5xl lg:text-9xl font-semibold">
+        <div className="flex flex-col lg:flex-row w-full lg:w-[90%] px-4 mx-auto items-center justify-between">
+          <h2 className=" w-full lg:w-1/2 text-4xl lg:text-8xl font-semibold">
             Our <br /> Services
           </h2>
           <div className=" hidden  w-fit lg:flex flex-col mr-8 ">
@@ -70,7 +69,7 @@ const Services = () => {
                 />
               </div>
             </div>
-            <p className="text-xl text-justify mt-32 mr-16  capitalize text-black">
+            <p className="text-base font-semibold text-justify mt-32 mr-16  capitalize text-black">
               Embracing the latest in travel technology, we <br /> ensure that
               your journey is not seamless but <br /> also enhanced with
               cutting-edge feature that <br /> redefine your travel experience.
@@ -82,12 +81,16 @@ const Services = () => {
           {services.map((card, i) => (
             <div
               key={i}
-              className="card shrink-0 w-full lg:w-[45%] lg:h-[34vh] bg-white flex flex-col lg:flex-row justify-center rounded-3xl gap-8 p-8 "
+              className="card shrink-0 w-full lg:w-[45%] lg:h-[34vh] bg-white flex flex-col lg:flex-row justify-center rounded-3xl gap-4 lg:gap-8 p-4 lg:p-8 "
             >
               <img src={card.icon} alt="" className="w-10 h-10" />
               <div className=" w-full lg:w-[70%] flex flex-col gap-3">
-                <h2 className="text-3xl font-semibold">{card.service}</h2>
-                <p className="text-base font-normal">{card.eleboration}</p>
+                <h2 className=" text-xl lg:text-3xl font-semibold">
+                  {card.service}
+                </h2>
+                <p className="text-sm lg:text-base font-normal">
+                  {card.eleboration}
+                </p>
               </div>
             </div>
           ))}
