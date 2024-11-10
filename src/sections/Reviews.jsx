@@ -120,8 +120,8 @@ const Reviews = () => {
             }}
             key={profile.id}
             className={`${
-              profile.id % 2 == 0 ? "lg:relative lg:top-20" : "relative"
-            } w-20 h-20  rounded-full overflow-hidden`}
+              profile.id % 2 == 0 ? " lg:top-20" : ""
+            } w-20 h-20  rounded-full overflow-hidden relative`}
           >
             <img
               src={profile.image}
