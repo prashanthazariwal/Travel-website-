@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Lenis from "lenis";
-import HeroSection from "./sections/HeroSection";
-import AboutSection from "./sections/AboutSection";
-import MarqueSection from "./sections/MarqueSection";
-import NatureAdventureSection from "./sections/NatureAdventureSection";
-import Services from "./sections/Services";
-import Reviews from "./sections/Reviews";
-import WhyUs from "./sections/WhyUs";
-import Footer from "./sections/Footer";
+
+import Home from "./pages/Home";
+import Admin from "./pages/Admin";
+import NoMatch from "./pages/NoMatch";
+import { Outlet, Route, Routes } from "react-router";
 import { ToastContainer } from "react-toastify";
 
 const App = () => {
@@ -28,16 +25,17 @@ const App = () => {
   });
 
   return (
-    <div className="main overflow-hidden bg-[#121212]">
+    <div className="w-full">
+      <Routes>
+        <Route path="/" element={<Home />}/>
+          <Route path="/admin" element={<Admin />} />
+          {/* Using path="*"" means "match anything", so this route
+        acts like a catch-all for URLs that we don't have explicit
+        routes for. */}
+          {/* <Route path="*" element={<NoMatch />} /> */}
+       
+      </Routes>
       <ToastContainer />
-      <HeroSection />
-      <AboutSection />
-      <MarqueSection />
-      <NatureAdventureSection />
-      <Services />
-      <Reviews />
-      <WhyUs />
-      <Footer />
     </div>
   );
 };

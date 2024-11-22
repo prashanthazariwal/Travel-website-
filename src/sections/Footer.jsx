@@ -57,10 +57,10 @@ const Footer = () => {
   }, []);
 
   const socialLinks = [
-    { icon: <FaFacebook />, url: "https://www.facebook.com/PepsiIndia" },
-    { icon: <FaInstagram />, url: "https://www.instagram.com/pepsi" },
-    { icon: <FaTwitter />, url: "https://twitter.com/pepsi" },
-    { icon: <FaLinkedin />, url: "https://www.linkedin.com/company/pepsico" },
+    { icon: <FaFacebook />, url: "#" },
+    { icon: <FaInstagram />, url: "#" },
+    { icon: <FaTwitter />, url: "#" },
+    { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/prashant-hazariwal-71374b212/" },
   ];
 
   const navLinks = [

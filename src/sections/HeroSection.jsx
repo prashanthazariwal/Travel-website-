@@ -8,7 +8,10 @@ import lady from "../assets/ladywithbag.png";
 import { RiArrowRightFill } from "@remixicon/react";
 import SplineMobile from "../components/SplineMobile";
 
+
 const HeroSection = () => {
+
+ 
   return (
     <div className="bg-[#F8F7FC] w-full h-fit lg:pb-20 overflow-hidden relative">
       <Navbar />
