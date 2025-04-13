@@ -77,7 +77,7 @@ const Services = () => {
           </div>
         </div>
         {/* --------------------------------- */}
-        <div className="flex flex-wrap gap-6 w-[90%]  mx-auto items-center py-10 lg:py-36 justify-center">
+        <div className="flex flex-wrap gap-6 w-[90%] mt-8 mx-auto items-center py-10  justify-center">
           {services.map((card, i) => (
             <div
               key={i}

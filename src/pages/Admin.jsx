@@ -22,18 +22,19 @@ const Admin = () => {
   );
 
   return (
-    <div className="h-screen  font-bold">
+    <div className="h-screen font-bold">
       
       {foundUser ? (
         <Users/>
       ) : (
         <div
           id="login"
-          className="w-1/5 text-center flex flex-col p-4 relative top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 rounded-lg bg-slate-100"
+          className="w-1/4 text-left flex flex-col p-4 relative top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 rounded-lg bg-slate-100 shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
         >
-          <img src={loginImg} alt="" className="w-1/5 mx-auto mb-5" />
-          <h2>Welcome Back</h2>
-          <p className="mb-5">Please Enter Your Details to Sign In</p>
+          {/* <img src={loginImg} alt="" className="w-1/5 mx-auto mb-5" /> */}
+          <h1 className="mb-10">TOGO</h1>
+          <h2 className="text-4xl font-semibold">Welcome back</h2>
+          <p className="my-5 text-2xl  font-semibold">Please enter your details to sign In..</p>
 
           <form onSubmit={handelSubmit} className="flex flex-col gap-2 ">
             <input
@@ -64,7 +65,7 @@ const Admin = () => {
             <input
               type="submit"
               value="Sign in"
-              className="bg-blue-500 w-fit rounded-lg px-2 py-1 mx-auto active:scale-95 text-white"
+              className="bg-neutral-500 shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-full rounded-lg px-2 py-1 mx-auto active:scale-95 text-white"
             />
           </form>
         </div>

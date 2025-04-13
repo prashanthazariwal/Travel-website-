@@ -228,8 +228,6 @@ const BookACallForm = ({ modalHandeler }) => {
           //     .required("Required"),
         })}
         onSubmit={(values, { setSubmitting }) => {
-          console.log(values);
-          // setFormValues((prev) => [...prev, values]);
           dispatch(addUser(values));
 
           toast.success("Booked sucessfuly", {
@@ -242,16 +240,12 @@ const BookACallForm = ({ modalHandeler }) => {
           });
 
           modalHandeler();
-          //   setTimeout(() => {
-          //     alert(JSON.stringify(values, null, 2));
-          //     setSubmitting(false);
-          //   }, 400);
         }}
       >
         <Form className="w-full flex gap-5 flex-col text-black">
           <div className="w-full flex flex-col md:flex-row gap-5 ">
             <div className="md:w-1/2 px-2 flex flex-col gap-5">
-              <h2 className="text-base font-bold text-blue-500">
+              <h2 className="text-base font-bold text-blue-500 mb-6">
                 Personal Information
               </h2>
               <div className="w-full flex flex-col md:flex-row gap-2">

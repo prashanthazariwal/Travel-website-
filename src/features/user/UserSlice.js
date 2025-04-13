@@ -32,12 +32,8 @@ export const userSlice = createSlice({
     addUser: (state, action) => {
 
       const userdetails = {  ...action.payload };
-      //   state.users?.push(userdetails);
       state.users = [...state.users, userdetails];
-      console.log(
-        "Updated state after addUser:",
-        JSON.parse(JSON.stringify(state.users))
-      ); // Log state here
+      localStorage.setItem('formData', JSON.stringify(state.users));
     },
   },
 });

@@ -1,6 +1,7 @@
 import { RiCloseLargeLine, RiMenu3Fill } from "@remixicon/react";
 import React, { useEffect, useState } from "react";
 import BookingModal from "./BookingModal";
+import { motion } from "motion/react";
 
 const Navbar = () => {
   const [sideBar, setSideBar] = useState(false);
@@ -22,7 +23,20 @@ const Navbar = () => {
     <>
       {modelOpen && <BookingModal modalHandeler={modalHandeler} />}
 
-      <nav className="hidden w-full px-20 py-2 sm:flex justify-between mt-4 items-center fixed z-10 select-none">
+      <motion.nav
+      initial={{
+        y:-10,
+        opacity : 0
+      }}
+      animate={{
+        y:0,
+        opacity : 1
+      }}
+      transition={{
+        duration : 0.3,
+        ease : "easeInOut"
+      }}
+      className="hidden w-full px-20 py-2 sm:flex justify-between mt-4 items-center fixed z-10  select-none">
         <h1 className="text-xl md:text-2xl lg:text-3xl font-bold">TO GO</h1>
         <ul className="flex text-sm md:text-base lg:text-xl font-normal text-[#868687] gap-4 md:gap-8 lg:gap-20 ml-16 p-2">
           {[
@@ -51,7 +65,7 @@ const Navbar = () => {
         >
           Book A Call
         </button>
-      </nav>
+      </motion.nav>
       <div
         className={`sm:hidden w-[10%] ${
           sideBar ? "hidden" : "flex"

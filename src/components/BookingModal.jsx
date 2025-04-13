@@ -2,6 +2,8 @@ import React from "react";
 import { createPortal } from "react-dom";
 import BookACallForm from "./BookACallForm";
 import { CgCloseR } from "react-icons/cg";
+import { motion } from "motion/react";
+import { transform } from "motion";
 
 const BookingModal = ({ modalHandeler }) => {
   
@@ -9,8 +11,34 @@ const BookingModal = ({ modalHandeler }) => {
     
   return createPortal(
     <>
-      <div className="w-full h-screen  bg-slate-900 bg-opacity-70 z-10 fixed top-0 text-white">
-        <div className="md:w-fit bg-slate-100 rounded-lg  h-screen md:h-fit overflow-scroll md:overflow-hidden fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 ">
+      <motion.div
+      initial={{
+        opacity: 0,
+        filter: blur("10px"),
+      }}
+      transition={{
+        duration : 0.3,
+        ease : "easeInOut",
+      }}
+      animate={{
+        opacity :1,
+        filter: blur("0px"),
+      }}
+      className="w-full h-screen  bg-slate-900 bg-opacity-70 z-10 fixed top-0 text-white">
+        <motion.div
+          initial={{
+            opacity: 0,
+            filter: blur("10px"), 
+          }}
+          transition={{
+            duration : 0.4,
+            ease : "easeInOut",
+          }}
+          animate={{
+            opacity :1,
+            filter: blur("0px"),
+          }}
+        className="md:w-fit bg-slate-100 rounded-lg  h-screen md:h-fit overflow-scroll md:overflow-hidden fixed top-1/2  -translate-y-1/2 left-1/2 -translate-x-1/2 ">
           <div className="w-full h-full p-4 flex flex-col gap-10">
             <div className="w-full flex items-center justify-between">
               <h1 className="text-black text-base md:text-lg font-semibold">Travel your Dream Place!</h1>
@@ -25,8 +53,8 @@ const BookingModal = ({ modalHandeler }) => {
             <BookACallForm modalHandeler = {modalHandeler}/>
             
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </>,
     document.querySelector("#bookingModal")
   );

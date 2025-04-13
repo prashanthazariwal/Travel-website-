@@ -81,7 +81,6 @@ const Reviews = () => {
   ]);
 
   const setActiveProfile = (e, id) => {
-    console.log(id);
     setProfiles((prevProfiles) =>
       prevProfiles.map((profile) =>
         profile.id === id
@@ -121,7 +120,7 @@ const Reviews = () => {
             key={profile.id}
             className={`${
               profile.id % 2 == 0 ? " lg:top-20" : ""
-            } w-20 h-20  rounded-full overflow-hidden relative`}
+            } w-20 h-20 cursor-pointer rounded-full overflow-hidden relative`}
           >
             <img
               src={profile.image}

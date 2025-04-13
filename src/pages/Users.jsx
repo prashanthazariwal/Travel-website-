@@ -7,44 +7,27 @@ import {
   getSortedRowModel,
   getFilteredRowModel,
 } from "@tanstack/react-table";
-import { useSelector } from "react-redux";
+
 
 const Users = () => {
 
-  const usersData = useSelector((state) => state.users.users);
-  console.log("usertableData", usersData);
+  const [formData , setFormData] = useState([])
+  useEffect(()=>{
+    const Data = JSON.parse(localStorage.getItem("formData"))
+    setFormData(Data)
+    
+  },[])
+ 
 
-  // useEffect(() => {
-  //   console.log("usertableData", usersData); // This should re-log whenever usersData changes
-  // }, [usersData]); // Ensure logging each time usersData updates
+console.log(formData)
+  const data = useMemo(() => formData);
 
-  const data = useMemo(() => usersData, [usersData]);
 
  
 
 
-  // firstName: "",
-  //   lastName: "",
-  //   email: "",
-  //   date_of_birth: "",
-  //   phoneNumber: "",
-  //   address: "",
-  //   departureDateTime: "",
-  //   returnDateTime: "",
-  //   departureFromCity: "",
-  //   departureFromCountry: "",
-  //   destinationCity: "",
-  //   destinationCountry: "",
-  //   acceptedTerms: false, // added for our checkbox
-  //   fare: "", // added for our select
 
   const columns = [
-    //   {
-    //     header: "ID",
-    //     accessorKey: "id",
-    //     footer: "ID",
-    //     // cell: info => info.getValue(),
-    //   },
     {
       header: "FIRST NAME",
       accessorKey: "firstName",
@@ -71,7 +54,7 @@ const Users = () => {
     },
     {
       header: "PHONE NUMBER",
-      accessorKey: "phone",
+      accessorKey: "phoneNumber",
       footer: "PHONE NUMBER",
       // cell: info => info.getValue(),
     },
@@ -139,23 +122,24 @@ const Users = () => {
       sorting: sorting,
       globalFilter: filtering,
     },
-    onGlobalFilterChange: setFiltering,
+    // onGlobalFilterChange: setFiltering,
     onSortingChange: setSorting,
   });
   return (
-    <div className="bg-slate-300 h-screen w-full p-2 flex flex-col  items-center ">
-      <table  className="w-10/12 mt-9 rounded-lg min-h-56 ">
-        <caption className="caption-top text-[black] font-[700] text-[2vmax]">
+    <div className=" h-screen w-full p-2 flex flex-col  items-center ">
+      <h2 className="text-sm bg-red-300 font-semibold">Togo Users information filled by the form is displayed below in the table !</h2>
+      <table  className="w-10/12 mt-9 rounded-lg min-h-56 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+        <caption className="caption-top text-left font-semibold text-[black] mb-4 text-[2vmax]">
           Users Information
         </caption>
-        <thead className=" text-[#fff] text-sm ">
+        <thead className=" text-sm font-semibold">
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id} >
               {headerGroup.headers.map((header) => (
                 <th
                   key={header.id}
                   onClick={header.column.getToggleSortingHandler()}
-                  className=" bg-green-400 border p-2 min-w-24 text-start "
+                  className=" bg-slate-300 border p-2 min-w-[6.4rem] text-start "
                 >
                   {flexRender(
                     header.column.columnDef.header,
@@ -187,7 +171,7 @@ const Users = () => {
             </tr>
           ))}
         </tbody>
-        <tfoot className="text-sm bg-green-400 text-white">
+        {/* <tfoot className="text-sm bg-slate-400 text-white">
           {table.getFooterGroups().map((footerGroup) => (
             <tr key={footerGroup.id}>
               {footerGroup.headers.map((header) => (
@@ -203,13 +187,13 @@ const Users = () => {
               ))}
             </tr>
           ))}
-        </tfoot>
+        </tfoot> */}
       </table>
 
-      <div className="mt-3 flex gap-4 items-center ">
+      <div className="mt-6 flex gap-4 items-center">
         <button
           onClick={() => table.setPageIndex(0)}
-          className="px-3 py-2 text-sm font-semibold bg-white rounded-[12px] "
+          className="px-3 py-2 text-sm font-semibold bg-slate-300 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-[12px] "
         >
           {" "}
           First Page
@@ -218,7 +202,7 @@ const Users = () => {
         <button
           disabled={!table.getCanPreviousPage()}
           onClick={() => table.previousPage()}
-          className="px-3 py-2 text-sm font-semibold bg-white rounded-[12px] "
+          className="px-3 py-2 text-sm font-semibold bg-slate-300 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-[12px] "
         >
           {" "}
           Previous Page
@@ -227,7 +211,7 @@ const Users = () => {
         <button
           disabled={!table.getCanNextPage()}
           onClick={() => table.nextPage()}
-          className="px-3 py-2 text-sm font-semibold bg-white rounded-[12px] "
+          className="px-3 py-2 text-sm font-semibold bg-slate-300 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-[12px] "
         >
           {" "}
           Next Page
@@ -235,18 +219,18 @@ const Users = () => {
 
         <button
           onClick={() => table.setPageIndex(table.getPageCount() - 1)}
-          className="px-3 py-2 text-sm font-semibold bg-white rounded-[12px] "
+          className="px-3 py-2 text-sm font-semibold bg-slate-300 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-[12px] "
         >
           {" "}
           Last Page
         </button>
 
-        <input
+        {/* <input
           type="text"
           value={filtering}
           onChange={(e) => setFiltering(e.target.value)}
           className="border-[black] border-[2px] w-[25%] rounded-lg h-[30px]"
-        />
+        /> */}
       </div>
     </div>
   );
