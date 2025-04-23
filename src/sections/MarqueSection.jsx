@@ -13,8 +13,8 @@ const MarqueSection = () => {
     });
   });
   return (
-    <div className="w-full bg-[#121212] flex py-10 lg:py-40 gap-2">
-      <h2 className="marque text-[14vmax] font-bold text-[#EEEEEE] flex gap-4">
+    <div className="w-full  bg-[#121212] overflow-hidden flex py-10 lg:py-40 gap-2">
+      <h2 className="marque text-[14vmax] xl:text-[11vmax] font-bold text-[#EEEEEE] flex gap-4">
         ToGo{" "}
         <span className="inline-block w-[14vmax] relative">
           <img
@@ -32,7 +32,7 @@ const MarqueSection = () => {
           />
         </span>{" "}
       </h2>
-      <h2 className="marque text-[14vmax] font-bold text-[#EEEEEE] flex gap-2">
+      <h2 className="marque text-[14vmax] xl:text-[11vmax] font-bold text-[#EEEEEE] flex gap-2">
         ToGo{" "}
         <span className="inline-block w-[14vmax] relative">
           <img

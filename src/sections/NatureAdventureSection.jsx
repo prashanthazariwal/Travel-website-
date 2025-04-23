@@ -8,7 +8,7 @@ import photo4 from "../assets/photo4.jpg";
 
 const NatureAdventureSection = () => {
   return (
-    <div className="w-full h-fit flex flex-col gap-10 bg-[#121212] lg:px-10">
+    <div className="w-full  h-fit flex flex-col gap-10 bg-[#121212] lg:px-10">
       <div className="flex flex-col lg:flex-row w-full justify-between px-10 py-2  gap-4 lg:gap-0">
         <div className="flex flex-col w-full lg:w-[25%] justify-center gap-4 ">
           <h2 className="text-5xl lg:text-6xl font-semibold text-white">

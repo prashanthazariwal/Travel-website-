@@ -1,21 +1,40 @@
-import React from "react";
+import React, { useRef } from "react";
 import travel1 from "../assets/travel1.jpg";
 import travel2 from "../assets/travel2.jpg";
 import travel3 from "../assets/travel3.jpg";
 import passport from "../assets/passport.png";
 import suitcase from "../assets/suitcase.png";
 import destination from "../assets/destination.png";
+import { motion, useScroll, useTransform } from "motion/react";
 
 const AboutSection = () => {
+
+  const ref = useRef(null)
+  const  { scrollYProgress } = useScroll({
+    target:ref,
+  offset:["start end" , "end start"]  
+})
+const transformContenth1 = useTransform( scrollYProgress , [0,1] , [-50 , 30])
+const transformContenth2 = useTransform( scrollYProgress , [0,0.5] , [-90 , 0])
+// const transformContentOpacity = useTransform( scrollYProgress , [0,0.5] , [0 , 1])
   return (
     <div className="bg-[#121212] w-full  relative overflow-hidden">
-      <h1 className=" text-[12rem] lg:text-[33rem] font-bold absolute -top-[10%] lg:-top-[35%] -right-[5%] text-[#eeeeef] opacity-70 leading-none select-none">
+      <motion.h1 
+      style={{
+        y: transformContenth1
+      }}
+      ref={ref} className=" text-[12rem] lg:text-[33rem] font-bold absolute -top-[10%] lg:-top-[35%] -right-[5%] text-[#eeeeef] opacity-70 leading-none select-none ">
         TOGO
-      </h1>
+      </motion.h1>
 
       <div className="lg:px-20">
         <div className="w-full  flex lg:flex-row flex-col mt-[40%] lg:mt-[30%] gap-4 lg:gap-20  justify-center items-center">
-          <div className=" w-full lg:w-[30%] pl-8 h-full flex flex-col gap-3">
+          <motion.div
+          style={{
+            x: transformContenth2,
+          }}
+         
+          className=" w-full lg:w-[30%] pl-8 h-full flex flex-col gap-3">
             <div className="w-full  h-fit flex relative ">
               <div className="w-14 lg:w-16 h-14 lg:h-16 rounded-full overflow-hidden">
                 <img
@@ -42,8 +61,8 @@ const AboutSection = () => {
             <h2 className="text-3xl lg:text-6xl font-semibold text-[#027DEC] ">
               About Us
             </h2>
-          </div>
-          <div className="w-full lg:w-[60%] h-full px-2 text-white ">
+          </motion.div>
+          <motion.div className="w-full lg:w-[60%] h-full px-2 text-white ">
             <p className="text-2xl   font-normal mt-7 ml-7 leading-tight lg:leading-loose">
               For the past 10 years , we've been your{" "}
               <span className="inline-block w-10 lg:w-14 relative">
@@ -73,7 +92,7 @@ const AboutSection = () => {
               </span>{" "}
               thst's exactly what we've been providing since our inseption.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

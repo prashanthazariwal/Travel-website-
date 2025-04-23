@@ -73,7 +73,7 @@ const Footer = () => {
     <footer
       ref={footerRef}
       id="footer"
-      className=" text-white border-t py-20 px-8 md:px-16 lg:px-24 overflow-hidden"
+      className=" text-white  border-t py-20 px-8 md:px-16 lg:px-24 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">

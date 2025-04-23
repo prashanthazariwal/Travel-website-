@@ -5,7 +5,7 @@ import upcycling from "../assets/upcycling.png";
 
 const WhyUs = () => {
   return (
-    <div className="w-full px-5 lg:px-20 py-20 bg-[#121212] flex  flex-col ">
+    <div className="w-full  px-5 lg:px-20 py-20 bg-[#121212] flex  flex-col ">
       <h2 className="text-[8vmax] font-semibold text-white text-right mr-16">
         Why Us
       </h2>

@@ -13,7 +13,7 @@ const HeroSection = () => {
 
  
   return (
-    <div className="bg-[#F8F7FC] w-full h-fit lg:pb-20 overflow-hidden relative">
+    <div className="bg-[#F8F7FC]  w-full h-fit lg:pb-20 overflow-hidden relative">
       <Navbar />
       <motion.h1 
        initial={{
@@ -28,13 +28,27 @@ const HeroSection = () => {
         duration : 0.3,
         ease : "easeInOut"
       }}
-      className="text-[12rem] md:text-[25rem] lg:text-[40vmax] font-bold absolute -top-[5%] -left-[75%] md:-top-[20%] md:-left-[40%] lg:-top-[25%] lg:-left-[30%] text-[#eeeeef] opacity-70 leading-none select-none">
+      className="text-[12rem] md:text-[25rem] lg:text-[40vmax]  font-bold absolute -top-[5%] -left-[75%] md:-top-[20%] md:-left-[40%] lg:-top-[25%] lg:-left-[30%] text-[#eeeeef] opacity-70 leading-none select-none">
         TOGO
       </motion.h1>
 
       {/* profiles of clients */}
-      <div className="w-full hidden lg:flex justify-end px-24 ">
-        <div className="w-fit flex flex-col mt-[9%]">
+      <div className="w-full  hidden lg:flex justify-end px-24 ">
+        <motion.div
+            initial={{
+              x:10,
+              opacity : 0
+            }}
+            animate={{
+              x:0,
+              opacity : 1
+            }}
+            transition={{
+              duration : 0.3,
+              delay:0.1,
+              ease : "easeInOut"
+            }}
+        className="w-fit flex flex-col mt-[9%]">
           <div className="w-40 h-8 flex relative">
             <div className="w-10 h-10 rounded-full  overflow-hidden">
               <img
@@ -72,7 +86,7 @@ const HeroSection = () => {
             transforming idea into impact. <br /> welcome to huge where
             creativity <br /> transforming ideas into impact
           </p>
-        </div>
+        </motion.div>
       </div>
 
       {/* Title Headings container */}

@@ -12,7 +12,7 @@ import Footer from '../sections/Footer'
 
 const Home = () => {
   return (
-    <div className="w-full main overflow-hidden bg-[#121212]">
+    <div className="w-full  main overflow-hidden bg-[#121212]">
       <HeroSection />
       <AboutSection />
       <MarqueSection />

@@ -90,7 +90,7 @@ const Reviews = () => {
     );
   };
   return (
-    <div id="Reviews" className="w-full px-5 lg:px-20 py-20 lg:py-36 bg-[#121212]">
+    <div id="Reviews" className="w-full  px-5 lg:px-20 py-20 lg:py-36 bg-[#121212]">
       <div className="w-full  flex lg:flex-row flex-col justify-between pl-10 ">
         <div className=" mt-10 w-full lg:w-[20%] lg:pl-8 h-full flex flex-col  gap-3">
           <div className="w-full  h-fit hidden lg:flex relative ">

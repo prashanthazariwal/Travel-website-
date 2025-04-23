@@ -2,8 +2,7 @@ import React from "react";
 import { createPortal } from "react-dom";
 import BookACallForm from "./BookACallForm";
 import { CgCloseR } from "react-icons/cg";
-import { motion } from "motion/react";
-import { transform } from "motion";
+import { motion ,AnimatePresence } from "motion/react";
 
 const BookingModal = ({ modalHandeler }) => {
   

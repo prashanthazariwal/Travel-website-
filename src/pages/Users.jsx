@@ -29,31 +29,31 @@ console.log(formData)
 
   const columns = [
     {
-      header: "FIRST NAME",
+      header: "First Name",
       accessorKey: "firstName",
       footer: "FIRST NAME",
       // cell: info => info.getValue(),
     },
     {
-      header: "LAST NAME",
+      header: "Last Name",
       accessorKey: "lastName",
       footer: "LAST NAME",
       // cell: info => info.getValue(),
     },
     {
-      header: "DOB",
+      header: "D.O.B",
       accessorKey: "date_of_birth",
       footer: "AGE",
       // cell: info => info.getValue(),
     },
     {
-      header: "EMAIL",
+      header: "Email",
       accessorKey: "email",
       footer: "EMAIL",
       // cell: info => info.getValue(),
     },
     {
-      header: "PHONE NUMBER",
+      header: "Phone Numbers",
       accessorKey: "phoneNumber",
       footer: "PHONE NUMBER",
       // cell: info => info.getValue(),
@@ -126,10 +126,11 @@ console.log(formData)
     onSortingChange: setSorting,
   });
   return (
+    <>
+      <h2 className="text-sm w-full text-center text-white bg-gradient-to-r from-[#94B4C1] via-[#547792] to-[#213448] py-1 font-semibold">Togo Users information is displayed below in the table !</h2>
     <div className=" h-screen w-full p-2 flex flex-col  items-center ">
-      <h2 className="text-sm bg-red-300 font-semibold">Togo Users information filled by the form is displayed below in the table !</h2>
       <table  className="w-10/12 mt-9 rounded-lg min-h-56 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-        <caption className="caption-top text-left font-semibold text-[black] mb-4 text-[2vmax]">
+        <caption className="caption-top text-left font-bold text-[black] mb-4 text-[1.8vmax]">
           Users Information
         </caption>
         <thead className=" text-sm font-semibold">
@@ -139,7 +140,7 @@ console.log(formData)
                 <th
                   key={header.id}
                   onClick={header.column.getToggleSortingHandler()}
-                  className=" bg-slate-300 border p-2 min-w-[6.4rem] text-start "
+                  className=" border p-2 min-w-[6.4rem] text-start "
                 >
                   {flexRender(
                     header.column.columnDef.header,
@@ -193,7 +194,7 @@ console.log(formData)
       <div className="mt-6 flex gap-4 items-center">
         <button
           onClick={() => table.setPageIndex(0)}
-          className="px-3 py-2 text-sm font-semibold bg-slate-300 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-[12px] "
+          className="px-3 py-2 text-sm font-semibold  shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-[12px] "
         >
           {" "}
           First Page
@@ -202,7 +203,7 @@ console.log(formData)
         <button
           disabled={!table.getCanPreviousPage()}
           onClick={() => table.previousPage()}
-          className="px-3 py-2 text-sm font-semibold bg-slate-300 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-[12px] "
+          className="px-3 py-2 text-sm font-semibold shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-[12px] "
         >
           {" "}
           Previous Page
@@ -211,7 +212,7 @@ console.log(formData)
         <button
           disabled={!table.getCanNextPage()}
           onClick={() => table.nextPage()}
-          className="px-3 py-2 text-sm font-semibold bg-slate-300 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-[12px] "
+          className="px-3 py-2 text-sm font-semibold  shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-[12px] "
         >
           {" "}
           Next Page
@@ -219,7 +220,7 @@ console.log(formData)
 
         <button
           onClick={() => table.setPageIndex(table.getPageCount() - 1)}
-          className="px-3 py-2 text-sm font-semibold bg-slate-300 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-[12px] "
+          className="px-3 py-2 text-sm font-semibold  shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-[12px] "
         >
           {" "}
           Last Page
@@ -233,6 +234,7 @@ console.log(formData)
         /> */}
       </div>
     </div>
+    </>
   );
 };
 
