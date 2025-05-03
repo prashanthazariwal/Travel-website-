@@ -130,7 +130,7 @@ console.log(formData)
       <h2 className="text-sm w-full text-center text-white bg-gradient-to-r from-[#94B4C1] via-[#547792] to-[#213448] py-1 font-semibold">Togo Users information is displayed below in the table !</h2>
     <div className=" h-screen w-full p-2 flex flex-col  items-center ">
       <table  className="w-10/12 mt-9 rounded-lg min-h-56 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-        <caption className="caption-top text-left font-bold text-[black] mb-4 text-[1.8vmax]">
+        <caption className="caption-top text-left uppercase font-bold text-[black] mb-4 text-[1.2vmax]">
           Users Information
         </caption>
         <thead className=" text-sm font-semibold">
@@ -140,7 +140,7 @@ console.log(formData)
                 <th
                   key={header.id}
                   onClick={header.column.getToggleSortingHandler()}
-                  className=" border p-2 min-w-[6.4rem] text-start "
+                  className="bg-slate-200 p-2 min-w-[6.4rem] text-center "
                 >
                   {flexRender(
                     header.column.columnDef.header,
@@ -163,7 +163,7 @@ console.log(formData)
         </thead> */}
         <tbody className="text-[black] text-sm">
           {table.getRowModel().rows.map((row) => (
-            <tr key={row.id} className="bg-white ">
+            <tr key={row.id} className="bg-white hover:bg-slate-100">
               {row.getVisibleCells().map((cell) => (
                 <td key={cell.id} className="border  min-w-24 p-2 font-[500]">
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
@@ -191,7 +191,7 @@ console.log(formData)
         </tfoot> */}
       </table>
 
-      <div className="mt-6 flex gap-4 items-center">
+      <div className="mt-6 w-full flex gap-4 justify-end">
         <button
           onClick={() => table.setPageIndex(0)}
           className="px-3 py-2 text-sm font-semibold  shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-[12px] "

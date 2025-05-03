@@ -37,13 +37,13 @@ const Services = () => {
 
   return (
     <div id="Services" className="w-full px-10 lg:px-20 bg-[#121212] pt-40">
-      <div className="flex flex-col bg-[#EEEEEE] rounded-tl-[4vmax] rounded-tr-[20vmax] rounded-b-[4vmax] pt-20 lg:pt-40">
+      <div className="flex flex-col bg-[#EEEEEE] rounded-tl-[4vmax] rounded-tr-[20vmax] rounded-b-[4vmax] pt-20 lg:pt-32">
         <div className="flex flex-col lg:flex-row w-full lg:w-[90%] px-4 mx-auto items-center justify-between">
-          <h2 className=" w-full lg:w-1/2 text-4xl lg:text-8xl font-semibold">
+          <h2 className=" w-full lg:w-1/2 text-4xl lg:text-8xl font-semibold capitalize">
             Our <br /> Services
           </h2>
           <div className=" hidden  w-fit lg:flex flex-col mr-8 ">
-            <div className="w-40 h-8 flex relative self-end">
+            <div className="w-40 h-8 flex relative self-end mr-8">
               <div className="w-32 h-32 absolute z-40 top-0 -left-52 text-4xl rounded-full bg-blue-500 text-white flex items-center justify-center  overflow-hidden">
                 90+
               </div>
@@ -69,7 +69,7 @@ const Services = () => {
                 />
               </div>
             </div>
-            <p className="text-base font-semibold text-justify mt-32 mr-16  capitalize text-black">
+            <p className="text-base font-medium text-justify mt-32 mr-16 lg:leading-5  capitalize text-black">
               Embracing the latest in travel technology, we <br /> ensure that
               your journey is not seamless but <br /> also enhanced with
               cutting-edge feature that <br /> redefine your travel experience.
@@ -77,7 +77,7 @@ const Services = () => {
           </div>
         </div>
         {/* --------------------------------- */}
-        <div className="flex flex-wrap gap-6 w-[90%] mt-8 mx-auto items-center py-10  justify-center">
+        <div className="flex flex-wrap gap-6 w-[90%] mt-8 mx-auto items-center  py-10  justify-between">
           {services.map((card, i) => (
             <div
               key={i}
@@ -88,7 +88,7 @@ const Services = () => {
                 <h2 className=" text-xl lg:text-3xl font-semibold">
                   {card.service}
                 </h2>
-                <p className="text-sm lg:text-base font-normal">
+                <p className="text-sm lg:text-base lg:leading-6 font-normal">
                   {card.eleboration}
                 </p>
               </div>
