@@ -25,7 +25,7 @@ const App = () => {
   });
 
   return (
-    <div className="w-full">
+    <div className="w-full font-Montserrat">
       <Routes>
         <Route path="/" element={<Home />}/>
           <Route path="/admin" element={<Admin />} />

@@ -153,7 +153,7 @@ const Reviews = () => {
                   alt={`Profile ${profile.id}`}
                   className="w-40 h-40 rounded-full object-cover"
                 />
-                <p className="text-white w-full lg:w-[40%] text-lg font-semibold mr-8 relative ml-8">
+                <p className="text-white w-full lg:w-[40%] text-justify text-base font-normal mr-8 relative ml-8">
                   {" "}
                   <span className="absolute -bottom-2 -right-8 lg:-right-20">
                     <img src={quote} alt="" className="w-10 h-10" />

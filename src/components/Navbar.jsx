@@ -56,7 +56,7 @@ const Navbar = () => {
           duration: 0.3,
           ease: "easeInOut",
         }}
-        className="hidden w-full px-20 py-2 sm:flex justify-between mt-4 items-center fixed z-10  select-none"
+        className="hidden  w-full px-20 py-2 sm:flex justify-between mt-4 items-center fixed z-20  select-none"
       >
         <h1 className="text-xl md:text-2xl lg:text-3xl font-bold">TO GO</h1>
         <ul className="flex text-sm md:text-base lg:text-xl font-normal text-[#868687] gap-4 md:gap-8 lg:gap-20 ml-16 p-2">
@@ -75,9 +75,7 @@ const Navbar = () => {
               </li>
             );
           })}
-          {/* <li className="cursor-pointer active:font-semibold active:scale-95">Services</li>
-        <li className="cursor-pointer active:font-semibold active:scale-95">Case Studies</li>
-        <li className="cursor-pointer active:font-semibold active:scale-95">Contact</li> */}
+         
         </ul>
         <button
           onClick={modalHandeler}

@@ -28,12 +28,12 @@ const HeroSection = () => {
         duration : 0.3,
         ease : "easeInOut"
       }}
-      className="text-[12rem] md:text-[25rem] lg:text-[40vmax]  font-bold absolute -top-[5%] -left-[75%] md:-top-[20%] md:-left-[40%] lg:-top-[25%] lg:-left-[30%] text-[#eeeeef] opacity-70 leading-none select-none">
+      className="text-[12rem] md:text-[25rem] lg:text-[40vmax]  font-bold absolute  -top-[5%] -left-[75%] md:-top-[20%] md:-left-[40%] lg:-top-[25%] lg:-left-[30%] text-[#eeeeef] opacity-70 leading-none select-none">
         TOGO
       </motion.h1>
 
       {/* profiles of clients */}
-      <div className="w-full  hidden lg:flex justify-end px-24 ">
+      <div className="w-full relative z-10 hidden lg:flex justify-end px-24 ">
         <motion.div
             initial={{
               x:10,

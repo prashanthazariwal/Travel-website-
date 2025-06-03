@@ -20,7 +20,7 @@ const MarqueSection = () => {
           <img
             src={flight}
             alt=""
-            className="w-[14vmax] absolute top-10 lg:top-14 right-0"
+            className="w-[14vmax] absolute top-10 -lg:top-14 right-0"
           />
         </span>{" "}
         <span className="font-semibold text-white">Places</span>{" "}
@@ -28,7 +28,7 @@ const MarqueSection = () => {
           <img
             src={flight}
             alt=""
-            className="w-[14vmax] absolute top-10 lg:top-14 right-0"
+            className="w-[14vmax] absolute top-10 -lg:top-14 right-0"
           />
         </span>{" "}
       </h2>

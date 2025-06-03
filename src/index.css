@@ -2,7 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@layer base {
+   .font-Montserrat {
+    font-family: "Montserrat", sans-serif;
+  }
+}
 /* Add custom scrollbar styles in the utilities layer */
 @layer utilities {
     /* For Chrome, Safari, Edge, and Opera */

@@ -13,7 +13,7 @@ const NatureAdventureSection = () => {
   
   const {scrollYProgress} = useScroll({
     target :  ref,
-    offset: ["start end" , "end start"]
+    offset: ["start end" , "end 70%"]
   })
  
 
@@ -36,7 +36,7 @@ const NatureAdventureSection = () => {
               <img src={leaf} alt="" className=" absolute -top-16  right-0" />
             </span>
           </h2>
-          <p className="text-lg text-[#EEEEEE]">
+          <p className="text-base font-medium text-[#EEEEEE]">
             a compalling tagline that convays the idea of efficiency
             effectiveness in finding what you need. it suggests that instead of
             wasting time search aimlessly.{" "}
@@ -92,7 +92,7 @@ const NatureAdventureSection = () => {
               />
             </span>
           </h2>
-          <p className="text-lg text-[#EEEEEE] mt-4 lg:mt-0">
+          <p className="text-base font-medium text-[#EEEEEE] mt-4 lg:mt-0">
             a compalling tagline that convays the idea of efficiency
             effectiveness in finding what you need. it suggests that instead of
             wasting time search aimlessly.{" "}
