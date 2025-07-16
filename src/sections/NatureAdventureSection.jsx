@@ -32,7 +32,7 @@ const NatureAdventureSection = () => {
         className="flex flex-col w-full lg:w-[25%] justify-center gap-4 ">
           <h2 className="text-5xl lg:text-6xl font-semibold text-white">
             Nature{" "}
-            <span className="inline-block w-16 relative bg-yellow-200">
+            <span className="inline-block w-16 relative ">
               <img src={leaf} alt="" className=" absolute -top-16  right-0" />
             </span>
           </h2>
@@ -65,7 +65,7 @@ const NatureAdventureSection = () => {
           x : transformXl,
           opacity:opacity
         }}
-        className="w-full lg:w-[30%] h-[30vmax] bg-red-300 rounded-3xl overflow-hidden">
+        className="w-full lg:w-[30%] h-[30vmax] rounded-3xl overflow-hidden">
           <img src={photo4} alt="" className="w-full h-full object-cover" />
         </motion.div>
         <motion.div
@@ -73,7 +73,7 @@ const NatureAdventureSection = () => {
           x : transformXl,
           opacity 
         }}
-        className="w-full lg:w-[35%] h-[30vmax] bg-green-300 rounded-3xl overflow-hidden">
+        className="w-full lg:w-[35%] h-[30vmax] rounded-3xl overflow-hidden">
           <img src={photo3} alt="" className="w-full h-full object-cover" />
         </motion.div>
         <motion.div
@@ -84,7 +84,7 @@ const NatureAdventureSection = () => {
         className="flex flex-col w-full lg:w-[30%] justify-center gap-4 ">
           <h2 className="text-5xl lg:text-6xl font-semibold text-white">
             Adventure{" "}
-            <span className="inline-block w-16 relative bg-yellow-200">
+            <span className="inline-block w-16 relative ">
               <img
                 src={adventure}
                 alt=""
