@@ -40,12 +40,12 @@ console.log(formData)
       footer: "LAST NAME",
       // cell: info => info.getValue(),
     },
-    {
-      header: "D.O.B",
-      accessorKey: "date_of_birth",
-      footer: "AGE",
-      // cell: info => info.getValue(),
-    },
+    // {
+    //   header: "D.O.B",
+    //   accessorKey: "date_of_birth",
+    //   footer: "AGE",
+    //   // cell: info => info.getValue(),
+    // },
     {
       header: "Email",
       accessorKey: "email",
@@ -58,12 +58,12 @@ console.log(formData)
       footer: "PHONE NUMBER",
       // cell: info => info.getValue(),
     },
-    {
-      header: "Address",
-      accessorKey: "address",
-      footer: "Address",
-      // cell: info => info.getValue(),
-    },
+    // {
+    //   header: "Address",
+    //   accessorKey: "address",
+    //   footer: "Address",
+    //   // cell: info => info.getValue(),
+    // },
     {
       header: "Departure Time",
       accessorKey: "departureDateTime",
@@ -191,7 +191,7 @@ console.log(formData)
         </tfoot> */}
       </table>
 
-      <div className="mt-6 w-full flex gap-4 justify-end">
+      <div className="mt-6  flex gap-4 justify-end">
         <button
           onClick={() => table.setPageIndex(0)}
           className="px-3 py-2 text-sm font-semibold  shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-[12px] "
